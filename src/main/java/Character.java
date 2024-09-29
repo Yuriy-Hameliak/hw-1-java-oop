@@ -19,4 +19,10 @@ public class Character {
     public void setHp(int hp) {
         this.hp = hp;
     }
+    public void kick(Character c) {
+
+    }
+    public boolean isAlive() {
+        return hp > 0;
+    }
 }
