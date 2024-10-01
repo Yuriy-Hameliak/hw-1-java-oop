@@ -1,3 +1,4 @@
+package lotr;
 public class Character {
 
     private int hp;
@@ -17,12 +18,23 @@ public class Character {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp < 0) {
+            this.hp = 0;
+        } else{
+            this.hp = hp;
+        }
+    }
+
+    public void setPower(int power) {
+        this.power = power;
     }
     public void kick(Character c) {
-
+        
     }
     public boolean isAlive() {
         return hp > 0;
+    }
+    public String toString() {
+        return "Character{hp=" + hp + ", power=" + power + "}";
     }
 }
