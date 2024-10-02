@@ -6,14 +6,12 @@ public class King  extends Character {
     public King() {
         super(x, x);
     }
-    public int getPower() {
-        return rand.nextInt(super.getPower()+1);
-    }
     
     public void kick(Character c) {
-        c.setHp(c.getHp() - this.getPower());
+        int power = rand.nextInt(super.getPower()+1);
+        c.setHp(c.getHp() - power);
     }
     public String toString() {
-        return "King{hp=" + this.getHp() + ", power=" + this.getPower() + "}";
+        return "King{hp=" + this.getHp() + ", power=" + x + "}";
     }
 }

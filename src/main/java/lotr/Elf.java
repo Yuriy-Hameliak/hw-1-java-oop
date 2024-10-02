@@ -9,7 +9,7 @@ public class Elf extends Character {
         if (c.getPower() < this.getPower()) {
             c.setHp(0);
         } else {
-            this.setPower(this.getPower() - 1);
+            c.setPower(c.getPower() - 1);
         }
     }
     public String toString() {
