@@ -10,15 +10,15 @@ public class GameManager {
         int round = 1;
         while (c1.isAlive() && c2.isAlive()) {
             System.out.println("Round " + round);
-            if (c1Name.equals(c2Name) && c1 instanceof Hobbit) {
+            if (c2 instanceof Hobbit && c1 instanceof Hobbit) {
                 System.out.println("Player 1:");
                 ((Hobbit) c1).toCry();
                 System.out.println("Player 2:");
                 ((Hobbit) c2).toCry();
                 break;
             }
-            if (c1Name.equals(c2Name) && c1 instanceof Elf) {
-                System.out.println("Two mighty elves would not fight each other");
+            if (c2 instanceof Elf && c1 instanceof Elf) {
+                System.out.println("Two mighty elves would not fight with each other");
                 break;
             }
             int t1 = c2.getHp();

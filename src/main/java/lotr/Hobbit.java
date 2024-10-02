@@ -10,8 +10,5 @@ public class Hobbit extends Character {
     public void toCry() {
         System.out.println("My existence is a mistake of the universe");
     }
-    public String toString() {
-        return "Hobbit{hp=" + this.getHp() + ", power=" + this.getPower() + "}";
-    }
 }
 

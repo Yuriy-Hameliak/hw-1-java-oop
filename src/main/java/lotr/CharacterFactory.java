@@ -1,10 +1,15 @@
 package lotr;
 import java.util.Random;
 public class CharacterFactory {
-    public  Character createCharacter() {
-        Random rand = new Random();
-        int c = rand.nextInt(4);
-        Character all[] = {new Knight(), new Elf(), new Hobbit(), new King()};
-        return all[c];
+    private Random random = new Random();
+    private Class<?>[] classes = {Hobbit.class, Elf.class, King.class, Knight.class};
+    public Character createCharacter() {
+        int index = random.nextInt(classes.length);
+        try {
+            return (Character) classes[index].getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
