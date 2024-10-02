@@ -6,7 +6,4 @@ public class King  extends Strategy{
     public King() {
         super();
     }
-    public String toString() {
-        return "King{hp=" + this.getHp() + ", power=" + x + "}";
-    }
 }

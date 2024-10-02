@@ -12,7 +12,4 @@ public class Elf extends Character {
             c.setPower(c.getPower() - 1);
         }
     }
-    public String toString() {
-        return "Elf{hp=" + this.getHp() + ", power=" + this.getPower() + "}";
-    }
 }

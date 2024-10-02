@@ -35,6 +35,6 @@ public class Character {
         return hp > 0;
     }
     public String toString() {
-        return "Character{hp=" + hp + ", power=" + power + "}";
+        return this.getClass().getSimpleName() + "{hp=" + hp + ", power=" + power + "}";
     }
 }
